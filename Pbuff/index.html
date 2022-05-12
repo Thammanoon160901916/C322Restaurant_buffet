@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project CE322 Buffet</title>
+    <link rel = "stylesheet" href="style.css"/>
+    
+</head>
+<body>
+    <header>
+        <div class ="nav">
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" onclick="logout()">Logout</a></li>
+                <li><a href = "#" id ="data" onclick='DATA()'>DATA</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <div class = "container"><br>
+        <h1 data-text="Project Buffet">
+            Project Buffet
+        </h1>
+        <h1 id ="countEntry"  style="color: black; font-size: 40px;position: absolute; left: -60%; top: 15%">
+            
+            โต๊ะว่างจำนวน<p id="entry">0</p><br><br>
+            โต๊ะที่จองแล้ว<p id="reserve">0</p>
+            
+        
+        </h1>
+
+        <div class ="row">
+            <a href = "#" class = "button" id ="button1" onclick='changeClass1()'>1</a>
+            <a href = "#" class = "button" id ="button2" onclick='changeClass2()'>2</a>
+            <a href = "#" class = "button" id ="button3" onclick='changeClass3()'>3</a>
+            <a href = "#" class = "button" id ="button4" onclick='changeClass4()'>4</a>
+        </div>
+        <div class ="row">
+            <a href = "#" class = "button" id ="button5" onclick='changeClass5()'>5</a>
+            <a href = "#" class = "button" id ="button6" onclick='changeClass6()'>6</a>
+            <a href = "#" class = "button" id ="button7" onclick='changeClass7()'>7</a>
+            <a href = "#" class = "button" id ="button8" onclick='changeClass8()'>8</a>
+        </div>
+        <div class ="row">
+            <a href = "#" class = "button" id ="button9" onclick='changeClass9()'>9</a>
+            <a href = "#" class = "button" id ="button10" onclick='changeClass10()'>10</a>
+            <a href = "#" class = "button" id ="button11" onclick='changeClass11()'>11</a>
+            <a href = "#" class = "button" id ="button12" onclick='changeClass12()'>12</a>
+        </div>
+        <div class ="row">
+            <a href = "#" class = "button" id ="button13" onclick='changeClass13()'>13</a>
+            <a href = "#" class = "button" id ="button14" onclick='changeClass14()'>14</a>
+            <a href = "#" class = "button" id ="button15" onclick='changeClass15()'>15</a>
+            <a href = "#" class = "button" id ="button16" onclick='changeClass16()'>16</a>
+        </div>
+        <a href = "#" class = "cashier" id ="cashier" onclick='cashier()'></a>
+    </div>
+    <div class ="popup">
+        <div class = "popup-content">
+            <img src = "photo-1553095066-5014bc7b7f2d.jpg" alt="aw" class ="aw">
+            <img src = "png-clipart-computer-icons-symbol-button-symbol-miscellaneous-sign.png " alt ="Close" class = "close">
+            <br><br><br><br><br><br><br><br><br>
+            Menu :<br><br><select id ="amount" class ="amount"><br>
+                <option value="379">379.-฿+Net</option>
+                <option value="579">579.-฿+Net</option>
+                <option value="789">789.-฿+Net</option>
+                <option value="999">999.-฿+Net</option>
+            </select>
+            <br><br><br>
+            Amount : <input id = "count" type="number" min ="1" max ="900000000000">
+            <a href="#" class = "button99" onclick="cal()">Total</a><br><br><br><br><br><br><br><br>
+            <p id ="result1" class="result1" ></p>
+            Received Amount : <input id = "Received" type="number" min ="5" max ="90000000000">
+            
+            <a href="#" class = "button99" onclick="calculate()">Calculate</a>
+            <br><br>
+            --Payment Channel--<br><br>
+            <button class= "adblur"onclick="return1()">1</button>
+            <button class= "adblur" onclick="return2()">2</button>
+            <button class= "adblur" onclick="return3()">3</button>
+            <button class= "adblur" onclick="return4()">4</button>
+            <button class= "adblur" onclick="return5()">5</button>
+            <button class= "adblur" onclick="return6()">6</button>
+            <button class= "adblur" onclick="return7()">7</button>
+            <button class= "adblur" onclick="return8()">8</button>
+            <button class= "adblur" onclick="return9()">9</button>
+            <button class= "adblur" onclick="return10()">10</button>
+            <button class= "adblur" onclick="return11()">11</button>
+            <button class= "adblur" onclick="return12()">12</button>
+            <button class= "adblur" onclick="return13()">13</button>
+            <button class= "adblur" onclick="return14()">14</button>
+            <button class= "adblur"onclick="return15()">15</button>
+            <button class= "adblur" onclick="return16()">16</button>
+            <p id ="resulted" class="resulted"> </p>
+        </div>
+    </div>
+    <div class="containerr">
+        <div class="popup1">
+            <a href = "#" class = "button" id ="close1" onclick='close1()'>Close</a>
+            <table id="table" border="1" width ="100%">
+                <tr>
+                    <th>Amount</th>
+                    <th>Cost</th>
+                    <th>Total</th>
+                    <th>Received</th>
+                    <th>Change</th>
+                </tr>
+            </table>
+            <button id ="download-button" class="download-button">SAVE</button>
+        </div>
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src ="buffet.js"></script>
+</form>
+</body>
+</html>
